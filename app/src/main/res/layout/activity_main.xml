@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#121212">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="hpwnr"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paste happ:// or v2raytun:// link"
+        android:textColor="#AAAAAA"
+        android:paddingBottom="12dp" />
+
+    <EditText
+        android:id="@+id/inputLink"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:background="#1E1E1E"
+        android:textColor="#FFFFFF"
+        android:hint="happ://crypt5/..."
+        android:textColorHint="#666666"
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/btnDecrypt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Decrypt"
+        android:layout_marginTop="12dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#00FF9C"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:text="Output will appear here" />
+    </ScrollView>
+
+</LinearLayout>
