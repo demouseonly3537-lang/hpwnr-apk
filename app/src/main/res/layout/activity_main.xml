@@ -4,57 +4,92 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#121212">
+    android:background="#0D0D0D">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="hpwnr"
-        android:textSize="24sp"
-        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:textColor="#00FF9C"
         android:textStyle="bold"
-        android:paddingBottom="8dp" />
+        android:paddingBottom="4dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Paste happ:// or v2raytun:// link"
-        android:textColor="#AAAAAA"
+        android:text="Happ + v2RayTun decrypt / encrypt"
+        android:textColor="#888888"
+        android:textSize="13sp"
         android:paddingBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/modeSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1A1A1A"
+        android:padding="8dp" />
 
     <EditText
         android:id="@+id/inputLink"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="12dp"
         android:gravity="top"
         android:inputType="textMultiLine"
-        android:background="#1E1E1E"
-        android:textColor="#FFFFFF"
-        android:hint="happ://crypt5/..."
-        android:textColorHint="#666666"
-        android:padding="12dp" />
+        android:background="#1A1A1A"
+        android:textColor="#EEEEEE"
+        android:hint="Paste happ://crypt5/... or plaintext"
+        android:textColorHint="#555555"
+        android:padding="12dp"
+        android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/btnDecrypt"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Decrypt"
-        android:layout_marginTop="12dp" />
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/btnPaste"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Paste"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Clear"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnRun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Run" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android: ent_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="14dp"
+        android:background="#111111"
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/outputText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#00FF9C"
-            android:textSize="14sp"
+            android:textSize="13sp"
             android:fontFamily="monospace"
-            android:text="Output will appear here" />
+            android:text="Ready.\n\nModes:\n• Decrypt auto\n• Encrypt crypt5/4/3\n• Encrypt v2raytun\n• Inspect\n• Unwrap" />
     </ScrollView>
 
 </LinearLayout>
